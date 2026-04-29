@@ -1,6 +1,6 @@
 # FlashLearn
 
-A native macOS menubar flashcard app with spaced repetition. Study while your AI coding agent works.
+A native macOS flashcard app with spaced repetition. Study while your AI coding agent works.
 
 FlashLearn hooks into your coding agent so it opens automatically when you send a prompt — you review flashcards during the wait, then switch back when it's done.
 
