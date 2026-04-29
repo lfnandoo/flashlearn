@@ -4,6 +4,10 @@ A native macOS menubar flashcard app with spaced repetition. Study while your AI
 
 FlashLearn hooks into your coding agent so it opens automatically when you send a prompt — you review flashcards during the wait, then switch back when it's done.
 
+<p align="center">
+  <img src="demo.gif" alt="FlashLearn demo" width="600" />
+</p>
+
 ## Supported Integrations
 
 | Tool | Hook Type | Setup |
