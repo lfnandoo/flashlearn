@@ -2,6 +2,7 @@ import AppKit
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     let snoozeManager = SnoozeManager()
+    var openReviewWindow: (() -> Void)?
     private var shortcut: GlobalShortcut?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -32,6 +33,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.activate(ignoringOtherApps: true)
         if let window = findReviewWindow() {
             window.makeKeyAndOrderFront(nil)
+        } else {
+            openReviewWindow?()
         }
     }
 

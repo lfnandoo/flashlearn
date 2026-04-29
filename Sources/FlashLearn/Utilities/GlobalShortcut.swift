@@ -13,7 +13,9 @@ class GlobalShortcut {
     func register() {
         globalMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
             if self?.isTargetShortcut(event) == true {
-                self?.action()
+                DispatchQueue.main.async {
+                    self?.action()
+                }
             }
         }
 

@@ -7,13 +7,16 @@ struct FlashLearnApp: App {
     @Environment(\.openWindow) private var openWindow
 
     var body: some Scene {
+        let _ = appDelegate.openReviewWindow = { [openWindow] in
+            openWindow(id: "review")
+        }
+
         MenuBarExtra(appDelegate.snoozeManager.isSnoozed ? "FlashLearn (Snoozed)" : "FlashLearn",
                      systemImage: appDelegate.snoozeManager.isSnoozed ? "moon.zzz" : "brain.head.profile") {
             Button("Review Now") {
                 openWindow(id: "review")
                 NSApplication.shared.activate(ignoringOtherApps: true)
             }
-            .keyboardShortcut("r")
 
             Divider()
 
