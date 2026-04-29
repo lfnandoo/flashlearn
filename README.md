@@ -26,6 +26,8 @@ FlashLearn hooks into your coding agent so it opens automatically when you send 
 ## Install
 
 ```bash
+git clone https://github.com/lfnandoo/flashlearn.git
+cd flashlearn
 ./scripts/install.sh
 ```
 
